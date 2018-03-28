@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        .navbar-header {
+            width: 50px;
+        }
+
+        .navbar {
+            background-color: rgb(1, 92, 165);
+            height: 65px;
+        }
+        th, td { 
+            padding:10px;
+            text-align: center; 
+        }
+        input[type="file"]{
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">
+                    <img style="width:150px" src="http://augmo.net/src/Bajaj.JPG">
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-log-in"></span> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <form>
+            <h2>Create Policy</h2>
+            <label for="policy">Policy Name</label>
+            <input type="text" name="policy" id="policy">
+            <table id="maintable">
+                <tr>
+                    <th colspan='1'>S.No</th>
+                    <th colspan='1'>Option Name</th>
+                    <th colspan='12'>Language(Audio files)</th>
+
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Asamee</th>
+                    <th>Bengali</th>
+                    <th>English</th>
+                    <th>Gujarati</th>
+                    <th>Hindi</th>
+                    <th>Kanand</th>
+                    <th>Malayalam</th>
+                    <th>Marathi</th>
+                    <th>Oriya</th>
+                    <th>Punjabi</th>
+                    <th>Tamil</th>
+                    <th>Telugu</th>
+
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <input type='text' name='coverage' value='coverage'>
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    <td>
+                            <label for="upload">
+                                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                    <input type='file' id='upload' name='coverageAudio' accept="audio/*" style="display:none">
+                                  </label>
+                        
+                    </td>
+                    
+                </tr>
+                <!--Importent points to remember-->
+                <tr>
+                        <td>2</td>
+                        <td>
+                            <input type='text' name='imp' value='Importent points to remember'>
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='impAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='impAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='impAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='impAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='impAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='mpAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='impAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='impAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='mpAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='impAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='impAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        <td>
+                                <label for="upload">
+                                        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                                        <input type='file' id='upload' name='impAudio' accept="audio/*" style="display:none">
+                                      </label>
+                            
+                        </td>
+                        
+                    </tr>
+            </table>
+
+
+        </form>
+        <button class='add_new'>Add new</button>
+    </div>
+
+</body>
+<script>
+    $(".add_new").click(function () { 
+
+$("#maintable").each(function () {
+   
+    var tds = '<tr>';
+    jQuery.each($('tr:last', this), function () {
+        tds += '<td>' + $(this).html() + '</td>';
+    });
+    tds += '</tr>';
+    //if ($('tbody', this).length > 0) {
+       // $('tbody', this).append(tds);
+    //} else {
+        $(this).append(tds);
+    //}
+});
+});
+</script>
+</html>
+

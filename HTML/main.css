@@ -1,0 +1,108 @@
+.navbar-header {
+    width: 50px;
+}
+
+.navbar {
+    background-color: rgb(1, 92, 165);
+    height: 65px;
+}
+
+.addPolicy {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    text-decoration: none;
+}
+
+.drop {
+    text-align: center;
+    border: 1px solid rgb(1, 92, 165);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+p {
+    font-size: 12px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+.modal {
+    text-align: center;
+    padding: 0!important;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.drop {
+    /*Sort of important*/
+    width: 300px;
+    /*Sort of important*/
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    
+    margin-left: -150px;
+    border: 2px dashed rgba(0, 0, 0, .3);
+    border-radius: 20px;
+    font-family: Arial;
+    text-align: center;
+    position: relative;
+   
+    font-size: 14px;
+    color: rgba(0, 0, 0, .3);
+}
+
+
+.drop:hover{
+    cursor: pointer;
+}
+
+/*Important*/
+
+.drop.mouse-over {
+    border: 2px dashed rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .5);
+}
+
+
+/*If you dont want the button*/
+
+#clickHere {
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: 20px;
+    line-height: 26px;
+    color: white;
+    font-size: 12px;
+    width: 100px;
+    height: 26px;
+    border-radius: 4px;
+    background-color: #3b85c3;
+
+}
+
+
+#clickHere:hover {
+    background-color: #4499DD;
+
+}

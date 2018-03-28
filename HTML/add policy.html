@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <style>
+        .navbar-header {
+            width: 50px;
+        }
+
+        .navbar {
+            background-color: rgb(1, 92, 165);
+            height: 65px;
+        }
+
+        .addPolicy {
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .drop {
+            text-align: center;
+            border: 1px solid rgb(1, 92, 165);
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+
+        .modal {
+            text-align: center;
+            padding: 0!important;
+        }
+
+        .modal:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -4px;
+        }
+
+        .modal-dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .drop {
+            /*Sort of important*/
+            width: 300px;
+            /*Sort of important*/
+            height: 150px;
+            position: absolute;
+            left: 50%;
+
+            margin-left: -150px;
+            border: 2px dashed rgba(0, 0, 0, .3);
+            border-radius: 20px;
+            font-family: Arial;
+            text-align: center;
+            position: relative;
+
+            font-size: 14px;
+            color: rgba(0, 0, 0, .3);
+        }
+
+
+        .drop:hover {
+            cursor: pointer;
+        }
+
+        /*Important*/
+
+        .drop.mouse-over {
+            border: 2px dashed rgba(0, 0, 0, .5);
+            color: rgba(0, 0, 0, .5);
+        }
+
+
+        /*If you dont want the button*/
+
+        #clickHere {
+            position: absolute;
+            cursor: pointer;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: 20px;
+            line-height: 26px;
+            color: white;
+            font-size: 12px;
+            width: 100px;
+            height: 26px;
+            border-radius: 4px;
+            background-color: #3b85c3;
+
+        }
+
+
+        #clickHere:hover {
+            background-color: #4499DD;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">
+                    <img style="width:150px" src="http://augmo.net/src/Bajaj.JPG">
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-log-in"></span> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class='addPolicy'>
+        <br>
+        <br>
+        <a href='#' data-toggle="modal" data-target="#myModal">
+            <div>
+                <h3 class="glyphicon glyphicon-plus"></h3>
+                <h3>Add Policy</h3>
+        </a>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Upload Policy</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+                    <h4>Upload policy for image target generation</h4>
+                    <div class='drop'>
+
+
+                        <h4>Drop files here or click to upload</h4>
+                        <p>Supported file types:".jpg" or non transparent ".png"
+                            <br>Maximum size of 2 MB</p>
+                        <input type='text' name='pName' placeholder="Policy Name">
+                        <input id="a" type="file" name="pic" accept="image/png, image/jpeg" />
+
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Upload</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(function () {
+            var dropZoneId = "drop-zone";
+            var buttonId = "clickHere";
+            var mouseOverClass = "mouse-over";
+
+            var dropZone = $("#" + dropZoneId);
+            var ooleft = dropZone.offset().left;
+            var ooright = dropZone.outerWidth() + ooleft;
+            var ootop = dropZone.offset().top;
+            var oobottom = dropZone.outerHeight() + ootop;
+            var inputFile = dropZone.find("input");
+            document.getElementById(dropZoneId).addEventListener("dragover", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropZone.addClass(mouseOverClass);
+                var x = e.pageX;
+                var y = e.pageY;
+
+                if (!(x < ooleft || x > ooright || y < ootop || y > oobottom)) {
+                    inputFile.offset({ top: y - 15, left: x - 100 });
+                } else {
+                    inputFile.offset({ top: -400, left: -400 });
+                }
+
+            }, true);
+
+            if (buttonId != "") {
+                var clickZone = $("#" + buttonId);
+
+                var oleft = clickZone.offset().left;
+                var oright = clickZone.outerWidth() + oleft;
+                var otop = clickZone.offset().top;
+                var obottom = clickZone.outerHeight() + otop;
+
+                $("#" + buttonId).mousemove(function (e) {
+                    var x = e.pageX;
+                    var y = e.pageY;
+                    if (!(x < oleft || x > oright || y < otop || y > obottom)) {
+                        inputFile.offset({ top: y - 15, left: x - 160 });
+                    } else {
+                        inputFile.offset({ top: -400, left: -400 });
+                    }
+                });
+            }
+
+            document.getElementById(dropZoneId).addEventListener("drop", function (e) {
+                $("#" + dropZoneId).removeClass(mouseOverClass);
+            }, true);
+
+        })
+
+
+        $('.drop').click(function () {
+
+            $('#a').click();
+        });
+
+        $('#a').change(function () {
+            $('#name').html(function () {
+                var fakePath = $('#a').attr('value').toString().split('\\');
+                return fakePath[fakePath.length - 1];
+            });
+        });
+
+    </script>
+
+</body>
+<script src="main.js"></script>
+
+</html>
